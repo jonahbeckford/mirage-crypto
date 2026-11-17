@@ -75,7 +75,7 @@ let print_toplevel name wordsize (module P : Mirage_crypto_ec.Dh_dsa) =
        @]"
   else
     printf
-      "@[<v>#ifdef ARCH_64BIT@,\
+      "@[<v>#if defined(ARCH_64BIT) && !defined(_MSC_VER)@,\
        #error \"Cannot use 32-bit tables on a 64-bit architecture\"@,\
        #endif@,\
        @]";
