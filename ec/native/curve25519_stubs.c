@@ -5,6 +5,7 @@
  */
 #if defined(ARCH_64BIT) && !defined(_MSC_VER)
 #include "curve25519_64.h"
+#define CURVE25519_64BIT
 #define WORD uint64_t
 #define LIMBS 5
 #else
@@ -80,7 +81,7 @@ typedef struct {
 
 // Field operations.
 
-#if defined(ARCH_64BIT)
+#if defined(CURVE25519_64BIT)
 
 // assert_fe asserts that |f| satisfies bounds:
 //
@@ -154,7 +155,7 @@ typedef struct {
     }                                                                    \
   } while (0)
 
-#endif  // ARCH_64BIT
+#endif  // CURVE25519_64BIT
 
 static void fe_frombytes_strict(fe *h, const uint8_t s[32]) {
   // |fiat_25519_from_bytes| requires the top-most bit be clear.

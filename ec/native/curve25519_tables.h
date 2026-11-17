@@ -18,7 +18,7 @@
 //    ./make_curve25519_tables.py > curve25519_tables.h
 
 static const fe d = {{
-#if defined(ARCH_64BIT)
+#if defined(CURVE25519_64BIT)
     929955233495203, 466365720129213, 1662059464998953, 2033849074728123,
     1442794654840575
 #else
@@ -28,7 +28,7 @@ static const fe d = {{
 }};
 
 static const fe sqrtm1 = {{
-#if defined(ARCH_64BIT)
+#if defined(CURVE25519_64BIT)
     1718705420411056, 234908883556509, 2233514472574048, 2117202627021982,
     765476049583133
 #else
@@ -38,7 +38,7 @@ static const fe sqrtm1 = {{
 }};
 
 static const fe d2 = {{
-#if defined(ARCH_64BIT)
+#if defined(CURVE25519_64BIT)
     1859910466990425, 932731440258426, 1072319116312658, 1815898335770999,
     633789495995903
 #else
@@ -142,7 +142,7 @@ static const uint8_t k25519SmallPrecomp[15 * 2 * 32] = {
 static const ge_precomp Bi[8] = {
     {
         {{
-#if defined(ARCH_64BIT)
+#if defined(CURVE25519_64BIT)
             1288382639258501, 245678601348599, 269427782077623,
             1462984067271730, 137412439391563
 #else
@@ -151,7 +151,7 @@ static const ge_precomp Bi[8] = {
 #endif
         }},
         {{
-#if defined(ARCH_64BIT)
+#if defined(CURVE25519_64BIT)
             62697248952638, 204681361388450, 631292143396476, 338455783676468,
             1213667448819585
 #else
@@ -160,7 +160,7 @@ static const ge_precomp Bi[8] = {
 #endif
         }},
         {{
-#if defined(ARCH_64BIT)
+#if defined(CURVE25519_64BIT)
             301289933810280, 1259582250014073, 1422107436869536,
             796239922652654, 1953934009299142
 #else
@@ -171,7 +171,7 @@ static const ge_precomp Bi[8] = {
     },
     {
         {{
-#if defined(ARCH_64BIT)
+#if defined(CURVE25519_64BIT)
             1601611775252272, 1720807796594148, 1132070835939856,
             1260455018889551, 2147779492816911
 #else
@@ -180,7 +180,7 @@ static const ge_precomp Bi[8] = {
 #endif
         }},
         {{
-#if defined(ARCH_64BIT)
+#if defined(CURVE25519_64BIT)
             316559037616741, 2177824224946892, 1459442586438991,
             1461528397712656, 751590696113597
 #else
@@ -189,7 +189,7 @@ static const ge_precomp Bi[8] = {
 #endif
         }},
         {{
-#if defined(ARCH_64BIT)
+#if defined(CURVE25519_64BIT)
             1850748884277385, 1200145853858453, 1068094770532492,
             672251375690438, 1586055907191707
 #else
@@ -200,7 +200,7 @@ static const ge_precomp Bi[8] = {
     },
     {
         {{
-#if defined(ARCH_64BIT)
+#if defined(CURVE25519_64BIT)
             769950342298419, 132954430919746, 844085933195555, 974092374476333,
             726076285546016
 #else
@@ -209,7 +209,7 @@ static const ge_precomp Bi[8] = {
 #endif
         }},
         {{
-#if defined(ARCH_64BIT)
+#if defined(CURVE25519_64BIT)
             425251763115706, 608463272472562, 442562545713235, 837766094556764,
             374555092627893
 #else
@@ -218,7 +218,7 @@ static const ge_precomp Bi[8] = {
 #endif
         }},
         {{
-#if defined(ARCH_64BIT)
+#if defined(CURVE25519_64BIT)
             1086255230780037, 274979815921559, 1960002765731872,
             929474102396301, 1190409889297339
 #else
@@ -229,7 +229,7 @@ static const ge_precomp Bi[8] = {
     },
     {
         {{
-#if defined(ARCH_64BIT)
+#if defined(CURVE25519_64BIT)
             665000864555967, 2065379846933859, 370231110385876, 350988370788628,
             1233371373142985
 #else
@@ -238,7 +238,7 @@ static const ge_precomp Bi[8] = {
 #endif
         }},
         {{
-#if defined(ARCH_64BIT)
+#if defined(CURVE25519_64BIT)
             2019367628972465, 676711900706637, 110710997811333,
             1108646842542025, 517791959672113
 #else
@@ -247,7 +247,7 @@ static const ge_precomp Bi[8] = {
 #endif
         }},
         {{
-#if defined(ARCH_64BIT)
+#if defined(CURVE25519_64BIT)
             965130719900578, 247011430587952, 526356006571389, 91986625355052,
             2157223321444601
 #else
@@ -258,7 +258,7 @@ static const ge_precomp Bi[8] = {
     },
     {
         {{
-#if defined(ARCH_64BIT)
+#if defined(CURVE25519_64BIT)
             1802695059465007, 1664899123557221, 593559490740857,
             2160434469266659, 927570450755031
 #else
@@ -267,7 +267,7 @@ static const ge_precomp Bi[8] = {
 #endif
         }},
         {{
-#if defined(ARCH_64BIT)
+#if defined(CURVE25519_64BIT)
             1725674970513508, 1933645953859181, 1542344539275782,
             1767788773573747, 1297447965928905
 #else
@@ -276,7 +276,7 @@ static const ge_precomp Bi[8] = {
 #endif
         }},
         {{
-#if defined(ARCH_64BIT)
+#if defined(CURVE25519_64BIT)
             1381809363726107, 1430341051343062, 2061843536018959,
             1551778050872521, 2036394857967624
 #else
@@ -287,7 +287,7 @@ static const ge_precomp Bi[8] = {
     },
     {
         {{
-#if defined(ARCH_64BIT)
+#if defined(CURVE25519_64BIT)
             1970894096313054, 528066325833207, 1619374932191227,
             2207306624415883, 1169170329061080
 #else
@@ -296,7 +296,7 @@ static const ge_precomp Bi[8] = {
 #endif
         }},
         {{
-#if defined(ARCH_64BIT)
+#if defined(CURVE25519_64BIT)
             2070390218572616, 1458919061857835, 624171843017421,
             1055332792707765, 433987520732508
 #else
@@ -305,7 +305,7 @@ static const ge_precomp Bi[8] = {
 #endif
         }},
         {{
-#if defined(ARCH_64BIT)
+#if defined(CURVE25519_64BIT)
             893653801273833, 1168026499324677, 1242553501121234,
             1306366254304474, 1086752658510815
 #else
@@ -316,7 +316,7 @@ static const ge_precomp Bi[8] = {
     },
     {
         {{
-#if defined(ARCH_64BIT)
+#if defined(CURVE25519_64BIT)
             213454002618221, 939771523987438, 1159882208056014, 317388369627517,
             621213314200687
 #else
@@ -325,7 +325,7 @@ static const ge_precomp Bi[8] = {
 #endif
         }},
         {{
-#if defined(ARCH_64BIT)
+#if defined(CURVE25519_64BIT)
             1971678598905747, 338026507889165, 762398079972271, 655096486107477,
             42299032696322
 #else
@@ -334,7 +334,7 @@ static const ge_precomp Bi[8] = {
 #endif
         }},
         {{
-#if defined(ARCH_64BIT)
+#if defined(CURVE25519_64BIT)
             177130678690680, 1754759263300204, 1864311296286618,
             1180675631479880, 1292726903152791
 #else
@@ -345,7 +345,7 @@ static const ge_precomp Bi[8] = {
     },
     {
         {{
-#if defined(ARCH_64BIT)
+#if defined(CURVE25519_64BIT)
             1913163449625248, 460779200291993, 2193883288642314,
             1008900146920800, 1721983679009502
 #else
@@ -354,7 +354,7 @@ static const ge_precomp Bi[8] = {
 #endif
         }},
         {{
-#if defined(ARCH_64BIT)
+#if defined(CURVE25519_64BIT)
             1070401523076875, 1272492007800961, 1910153608563310,
             2075579521696771, 1191169788841221
 #else
@@ -363,7 +363,7 @@ static const ge_precomp Bi[8] = {
 #endif
         }},
         {{
-#if defined(ARCH_64BIT)
+#if defined(CURVE25519_64BIT)
             692896803108118, 500174642072499, 2068223309439677,
             1162190621851337, 1426986007309901
 #else
